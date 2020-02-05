@@ -1,0 +1,64 @@
+body{
+    width: 650px;
+    margin: 0 auto;
+    background: black;
+    color: #FFF;
+    font: 20px sans-serif;
+}
+header{
+    padding: 10px 0px;
+    font-size: 1.5em;
+}
+h2{
+    font: size 20px;
+    margin-top:0;
+}
+a{
+    color:#FAA202;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+    float: left;
+}
+.menu{
+    padding:0px 10px
+}
+main{
+    margin-top:50px;
+}
+table{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
+caption{
+    margin-bottom:10px; 
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: left;
+}
+th,td{
+    text-align: left;
+}
+section{
+    margin: 20px 0px;
+    padding: 30px 20px 30px 20px;
+    border:2px solid #FFF;
+}
+#jupiter{
+    background-image: url(../images/Jupiter.jpg);
+}
+#saturn{
+    background-image: url(../images/Saturn.jpg);
+}
+#uranus{
+    background-image: url(../images/Uranus.jpg);
+}
+#neptune{
+    background-image: url(../images/Neptune.jpg);
+}
+footer{
+    text-align: center;
+    background-color: #388bff;
+}
