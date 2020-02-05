@@ -1,0 +1,12 @@
+h3{
+    margin: 10px 0px 0px 0px;
+}
+
+audio{
+    margin: 5px 0px;
+}
+
+video{
+    margin: 5px 0px;
+    object-fit: cover;
+}

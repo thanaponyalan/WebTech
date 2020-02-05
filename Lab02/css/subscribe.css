@@ -1,0 +1,30 @@
+.col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+  
+.col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+form{
+    border: 1px solid #FFF;
+    padding: 15px;
+    font-size: 0.8em;
+}
+
+form p{
+    width:34%;
+    margin-top:-25px;
+    margin-bottom: 0;
+    background:black;
+}

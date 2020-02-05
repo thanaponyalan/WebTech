@@ -1,0 +1,16 @@
+tr td{
+    color:#ff0404;
+}
+
+#t2>tr{
+    color: #04ecff
+}
+
+aside p~p{
+    color:#04ff48;
+}
+
+section{
+    border-radius: 20px;
+    box-shadow:6px 6px 10px #FFF;
+}
