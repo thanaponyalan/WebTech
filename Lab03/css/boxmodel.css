@@ -1,0 +1,16 @@
+p{
+    border: 2px solid blue;
+}
+p#myBox1{
+    background: yellow;
+    width: 350px;
+    height: 100px;
+}
+p#myBox2{
+    background: #51eb00;
+    width: 500px;
+    height: 150px;
+    padding: 20px;
+    margin: 50px;
+    border: 5px solid gray;
+}
