@@ -14,6 +14,7 @@ div:nth-child(3){
 }
 article{
     display: flex;
+    flex-wrap: wrap;
 }
 section{
     font-size: 2em;
@@ -21,12 +22,16 @@ section{
     height: 200px;
     margin: 5px 5px;
     padding: 10px;
+    box-sizing: border-box;
+    width: 48%;
 }
 aside{
     font-size: 1em;
     margin: 5px 5px;
     padding: 10px;
     background-color: cadetblue;
+    box-sizing: border-box;
+    width: 33%;
 }
 footer{
     font-size: 1em;
@@ -35,4 +40,7 @@ footer{
     padding: 10px;
     background-color: yellowgreen;
     text-align: center;
+}
+main{
+    display: flex;
 }
