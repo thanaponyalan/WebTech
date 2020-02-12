@@ -39,4 +39,8 @@ footer{
     background-color: burlywood;
     text-align: center;
 }
+main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
 
