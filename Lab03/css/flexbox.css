@@ -1,0 +1,38 @@
+nav{
+    display: flex;
+    background-color: yellowgreen;
+    margin: 5px;
+    padding: 10px 5px;
+}
+div{
+    font-size: 1.5em;
+    line-height: 30px;
+    margin: 0px 10px;
+}
+div:nth-child(3){
+    margin-left: auto;
+}
+article{
+    display: flex;
+}
+section{
+    font-size: 2em;
+    background-color: burlywood;
+    height: 200px;
+    margin: 5px 5px;
+    padding: 10px;
+}
+aside{
+    font-size: 1em;
+    margin: 5px 5px;
+    padding: 10px;
+    background-color: cadetblue;
+}
+footer{
+    font-size: 1em;
+    line-height: 50px;
+    margin: 5px 5px;
+    padding: 10px;
+    background-color: yellowgreen;
+    text-align: center;
+}
