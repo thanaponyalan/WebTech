@@ -1,0 +1,48 @@
+nav{
+    display: flex;
+    background-color: burlywood;
+    margin: 5px;
+    padding: 10px 5px;
+}
+div{
+    font-size: 1.5em;
+    line-height: 30px;
+    margin: 0px 10px;
+    width: 16%;
+}
+div:nth-child(3){
+    margin-left: auto;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-gap: 10px;
+    margin: 5px;
+}
+section{
+    font-size: 2em;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+aside{
+    font-size: 1em;
+    margin: 5px 5px;
+    padding: 10px;
+    background-color: cadetblue;
+}
+footer{
+    display: flex;
+    font-size: 1em;
+    line-height: 50px;
+    margin: 5px 5px;
+    padding: 10px;
+    background-color: burlywood;
+    justify-content: center;
+
+}
+main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
