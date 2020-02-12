@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    background-color: yellowgreen;
+    padding: 10px 5px;
+}
+div {
+    font-size: 1.5em;
+    line-height: 30px;
+    margin: 0px 10px;
+}
+/*Move the 3rd menu to the left*/
+header > div:nth-child(3) {
+    margin-left: auto;
+}

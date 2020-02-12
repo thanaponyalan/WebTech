@@ -1,0 +1,59 @@
+body {
+    margin: 60px;
+}
+article {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 10px;
+   
+    grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+
+}
+section {
+    font-size: 2em;
+    text-align: center;
+    border: solid yellowgreen;
+    border-radius: 22px;
+    padding: 80px 0;
+}
+
+#firstSection {
+    grid-area: one;
+    background-color: burlywood;
+}
+
+#secondSection {
+    grid-area: two;
+    background-color: thistle;
+}
+#thirdSection {
+    grid-area: three;
+    background-color: aquamarine;
+}
+#fourthSection {
+    grid-area: four;
+    background-color: cadetblue;
+}
+#fifthSection {
+    grid-area: five;
+    background-color: cornflowerblue;
+}
+#sixthSection {
+    grid-area: six;
+    background-color: gainsboro;
+}
+#seventhSection {
+    grid-area: seven;
+    background-color: darkseagreen;
+}
+#eighthSection {
+    grid-area: eight;
+    background-color: gold;
+}
+#ninethSection {
+    grid-area: nine;
+    background-color: coral;  
+}

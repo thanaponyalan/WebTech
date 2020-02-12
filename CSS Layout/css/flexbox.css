@@ -1,0 +1,19 @@
+article {
+    display: flex;
+    /*flex-wrap: wrap;*/
+}
+
+section {
+    background-color: yellowgreen;
+    height: 200px;
+    margin: 5px 5px;
+    padding: 10px;
+    border: solid red;
+    width: 20%;
+}
+/*Example for ordering the flex items in first article element*/
+article :nth-child(1) { order: 2;}
+article :nth-child(2) { order: 3;}
+article :nth-child(3) { order: 4;}
+article :nth-child(4) { order: 1;}
+

@@ -1,0 +1,59 @@
+body {
+    margin: 60px;
+}
+section {
+    display: inline-grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 10px;
+/*    
+    grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+*/
+}
+div {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border: solid yellowgreen;
+}
+/*
+#firstSection {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: burlywood;
+}
+
+#secondSection {
+    grid-area: two;
+    background-color: thistle;
+}
+#thirdSection {
+    grid-area: three;
+    background-color: aquamarine;
+}
+#fourthSection {
+    grid-area: four;
+    background-color: cadetblue;
+}
+#fifthSection {
+    grid-area: five;
+    background-color: cornflowerblue;
+}
+#sixthSection {
+    grid-area: six;
+    background-color: gainsboro;
+}
+#seventhSection {
+    grid-area: seven;
+    background-color: darkseagreen;
+}
+#eighthSection {
+    grid-area: eight;
+    background-color: gold;
+}
+#ninethSection {
+    grid-area: nine;
+    background-color: coral;  
+}
+*/

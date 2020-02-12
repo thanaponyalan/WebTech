@@ -1,0 +1,36 @@
+article {
+    display: grid;
+
+    /*Create 2 columns grid using % value*/
+    /*grid-template-columns: 50% 50%;*/
+    /*Create 3 columns grid using px value*/
+    /*grid-template-columns: 100px 100px 300px;*/
+    /*Create 3 columns grid using fr unit*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*Create 3 columns grid using fr unit with repeat*/
+    /*grid-template-columns: repeat(3, 2fr);*/
+    /*Create 6 rows grid using fr unit with repeat*/
+    /*grid-template-rows: repeat(6, 1fr);*/
+    /*Creat 6 rows 3 columns grid using shorhand with repeat*/
+    /*grid-template: repeat(6, 1fr) / repeat(3, 2fr);*/
+    
+    grid-auto-rows: 200px;
+    grid-gap: 1rem;
+    margin: 50px;
+}
+section {
+    background-color: yellowgreen;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: solid orange;
+}
+/*.bigRow {
+    grid-row: span 2;
+}
+.bigColumn {
+    grid-column: span 3;
+}*/
+/*Move section 6 to the location of section 2
+.item6 {
+    grid-area: 1 / 2 / 2 / 3;
+}*/
