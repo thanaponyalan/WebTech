@@ -1,0 +1,18 @@
+nav {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: translate (-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+}
+  
+nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+a#menu svg {
+width: 40px;
+fill: #000;
+}

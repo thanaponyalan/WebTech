@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing DOM using ID</title>
+        <style>
+            .visible{
+                position: static;
+            }
+            .hide{
+                position: absolute;
+                top:-9999px;
+                left:-9999px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="heading">
+            <h2><a href="/" id="home-link">Title of your site</a></h2>
+        </div>
+        <h2>Using getElementsByTagName</h2>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <h2 name="title">Member form</h2>
+        Name : <input type="text" name="name"><br>
+        Surname : <input type="text" name="surname"><br>
+        Phone number : <input type="number" name="phone">
+        <!-- <h2>Using getElementsByClassName</h2> -->
+        <div id="header">
+            <h2>Using querySelector and querySelectorAll</h2>
+        </div>
+        <p class="dropcap huge">First paragraph</p>
+        <p id="e" class="dropcap">Second <span class="huge">paragraph</span></p>
+        <p class="dropcap">Third paragraph</p>
+        <img src="Lab01/images/Jupiter.jpg" alt="placeholder image" class="visible" id="plc">
+    </body>
+</html>
