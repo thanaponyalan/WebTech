@@ -1,0 +1,31 @@
+/*There are all about Responsive Design for Mostly Fluid*/
+
+@media only screen and (max-width: 1080px){
+    /*Show only one column of article for medium screen*/
+    article{
+        grid-template-areas: 
+            'header'
+            'jupiter'
+            'saturn'
+            'uranus'
+            'neptune';
+    }
+}
+
+@media only screen and (max-width: 768px){
+    /*Show only one column of content for small screen*/
+    main{
+        grid-template-areas: 
+            'article'
+            'aside';
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    /*Remain fixed size for large screen (Mostly Fluid)*/
+    body{
+        width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

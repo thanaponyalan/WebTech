@@ -1,0 +1,130 @@
+body{
+    background: black;
+    color: #FFF;
+    font: 16px sans-serif;
+}
+
+header{
+    padding: 10px 0px;
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 20px;
+    margin-top:0;
+}
+
+a{
+    color:#FAA202;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+nav>div{
+    font-size: 1em;
+    line-height: 30px;
+    margin: 0px 10px;
+}
+
+nav>div:nth-child(3){
+    margin-left: auto;
+}
+
+.menu{
+    padding:0px 10px
+}
+
+.caption{
+    margin-bottom:10px; 
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: left;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 'article aside';
+    grid-gap: 15px;
+    margin: 5px;
+}
+
+article{
+    grid-area: article;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "jupiter saturn"
+        "uranus neptune";
+    grid-gap: 15px;
+}
+
+aside{
+    grid-area: aside;
+}
+
+section{
+    padding: 30px 15px 30px 15px;
+    border:2px solid #FFF;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.detailContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(5,1fr);
+}
+
+.caption.item{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#header{
+    grid-area: header;
+}
+
+#jupiter{
+    background-image: url(../images/Jupiter.jpg);
+    grid-area: jupiter;
+}
+
+#saturn{
+    background-image: url(../images/Saturn.jpg);
+    grid-area: saturn;
+}
+
+#uranus{
+    background-image: url(../images/Uranus.jpg);
+    grid-area: uranus;
+}
+
+#neptune{
+    background-image: url(../images/Neptune.jpg);
+    grid-area: neptune;
+}
+
+footer{
+    background-color: #388bff;
+    display: flex;
+    margin: 5px;
+    padding: 10px 5px;
+    justify-content: center;
+}
+
+/*combinator.css*/
+aside p~p{
+    color:#04ff48;
+}
+
+section{
+    border-radius: 20px;
+    box-shadow:3px 3px 6px #FFF;
+}
