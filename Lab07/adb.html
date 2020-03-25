@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Address Book</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Address Book</h1>
+        <form action="" method="get" id="searchForm">
+            <div class="section">
+                <label for="q">Search address book</label>
+                <input type="search" id="q" name="q" required placeholder="type a name">
+            </div>
+            <div class="btnGroup">
+                <button type="submit" id="btnSearch">Search</button>
+                <button type="button" id="getAll">Get all contacts</button>
+            </div>
+        </form>
+        <div id="output"></div>
+        <script src="script/adb.js"></script>
+    </body>
+</html>
