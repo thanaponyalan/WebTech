@@ -1,8 +1,8 @@
-function route(handle, pathname, response){
+function route(handle, pathname, request, response){
     `use strict`;
     console.log(`Router Module : Route a request for ${pathname}`);
     if(typeof handle[pathname]===`function`){
-        return handle[pathname](response);
+        handle[pathname](response, request);
     }else{
         console.log(`No request handler found for ${pathname}`);
         response.writeHead(404,{"content-type":"text/plain"});

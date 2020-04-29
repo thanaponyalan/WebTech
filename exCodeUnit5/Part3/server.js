@@ -6,7 +6,7 @@ function start(route, handle){
     function onRequest(request, response){
         var pathname=url.parse(request.url).pathname;
         console.log(`Server Module : Request for ${pathname} received.`);
-        route(handle, pathname, response);
+        route(handle, pathname, request, response);
     }
     http.createServer(onRequest).listen(8080);
     console.log(`Server has started on 8080`);
