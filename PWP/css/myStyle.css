@@ -1,4 +1,5 @@
 body{
+    font-family: 'Balsamiq Sans', cursive;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -17,12 +18,37 @@ header > h1{
 
 header > nav{
     flex-grow: 2;
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0 auto;
+    display: flex;
+}
+
+header > nav a{
+    float: left;
+    color: lightgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header > nav a:hover, header > nav a.active{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+header > nav .icon{
+    display: none;
 }
 
 main{
     margin: 3em;
     display: grid;
-    grid-gap: 1.5em;
+    grid-gap: 3em;
     grid-template-areas: 
         "about"
         "js";
@@ -38,7 +64,32 @@ main{
 
 section{
     display: grid;
-    grid-template: 1fr 5fr 1fr/3fr 4fr;
+    grid-template: 1fr 6fr 5fr/3fr 4fr;
+}
+
+section p, section a{
+    font-size: 20px;
+    color: grey;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.sectionHeader{
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sectionFooter{
+    color: #00bbff;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sectionFooter:hover{
+    text-decoration: underline;
 }
 
 img{
@@ -52,4 +103,12 @@ footer{
     padding-left: 3em;
     padding-right: 3em;
     display: flex;
+    min-height: 40px;
+    /* justify-content: center; */
+    background-color: lightgrey;
+    align-items: center;
+}
+
+footer>p:last-child{
+    margin-left: auto;
 }
