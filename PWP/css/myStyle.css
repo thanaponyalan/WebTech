@@ -45,60 +45,6 @@ header > nav .icon{
     display: none;
 }
 
-main{
-    margin: 3em;
-    display: grid;
-    grid-gap: 3em;
-    grid-template-areas: 
-        "about"
-        "js";
-}
-
-#about{
-    grid-area: about;
-}
-
-#js{
-    grid-area: js;
-}
-
-section{
-    display: grid;
-    grid-template: 1fr 6fr 5fr/3fr 4fr;
-}
-
-section p, section a{
-    font-size: 20px;
-    color: grey;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.sectionHeader{
-    color: black;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.sectionFooter{
-    color: #00bbff;
-    font-size: 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.sectionFooter:hover{
-    text-decoration: underline;
-}
-
-img{
-    grid-row: span 3/auto;
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 16px 8px 20px 0 rgba(0, 0, 0, 0.1);
-}
-
 footer{
     padding-left: 3em;
     padding-right: 3em;
@@ -111,4 +57,24 @@ footer{
 
 footer>p:last-child{
     margin-left: auto;
+}
+
+@media only screen and (max-width: 700px){
+    header{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    header > nav{
+        display: none;
+    }
+
+    footer{
+        margin-top: 3em;
+        flex-direction: column;
+    }
+
+    footer > p{
+        text-align: center;
+    }
 }
