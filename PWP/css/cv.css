@@ -22,7 +22,7 @@ img{
     grid-template: 1fr 1fr/1fr 1fr;
 }
 
-#second>div>h3{
+h3{
     border-bottom: 3px solid rgba(0,0,0,0.08);
 }
 
