@@ -1,0 +1,113 @@
+#first{
+    /* display: grid;
+    grid-template: 2fr 3fr 2fr/2fr 2fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#first h1, #first h2, h3{
+    text-transform: uppercase;
+}
+
+img{
+    border-radius: 50%;
+    width: 25%;
+}
+
+#second{
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+}
+
+#second>div>h3{
+    border-bottom: 3px solid rgba(0,0,0,0.08);
+}
+
+.left{
+    text-align: right;
+    padding-right: 2em;
+    border-right: 2px solid rgba(0,0,0,0.1);
+}
+
+.left ul{
+    direction: rtl;
+}
+
+.left ul li p{
+    direction: ltr;
+}
+
+.right{
+    padding-left: 2em;
+    border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+#skills li p{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+meter{
+    width: 80%;
+}
+meter::-webkit-meter-optimum-value {
+    background: linear-gradient(to right, #707070, #505050);
+}
+
+#third{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#myHobbies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+#myHobbies img{
+    border-radius: 0%;
+    width: 36px;
+}
+
+@media only screen and (max-width: 1024px){
+    #skills li p{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@media only screen and (max-width: 864px){
+    #skills li p{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #second{
+        grid-template: none;
+        grid-column: 1fr;
+    }
+    .left{
+        text-align: left;
+        border-right: none;
+        padding-left: 2em;
+    }
+    .left ul{
+        direction: ltr;
+    }
+    .right{
+        border-left: none;
+        padding-right: 2em;
+    }
+    img{
+        width: 50%;
+    }
+}
