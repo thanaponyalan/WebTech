@@ -1,3 +1,4 @@
+/* กำหนดให้ body ทั้งหมดใช้ font Balsamiq Sans (จาก google api) มีขนาดกว้างสูงสุดไม่เกิน 1200px โดยจัดให้อยู่กึ่งกลาง และให้ไม่มีขอบภายด้านล่าง */
 body{
     font-family: 'Balsamiq Sans', cursive;
     max-width: 1200px;
@@ -6,25 +7,27 @@ body{
     margin-bottom: 0;
 }
 
+/* กำหนดให้ header มีระยะขอบภายนอกด้ายซ้ายและด้ายขวาเท่ากับ 3em มีการแสดงผลแบบ flex และให้ items ต่าง ๆ จัดว่างอยู่บน baseline */
 header{
-    margin-left: 3em;
-    margin-right: 3em;
+    margin: 0 3em;
     display: flex;
     align-items: baseline;
 }
 
+/* กำหนดให้ h1 ซึ่งเป็น child ของ header มีความกว้างสูงสุด */
 header > h1{
     flex-grow: 4;
 }
 
+/* กำหนดให้ element ที่มี class เป็น topnav มีการแสดงผลแบบ flex โดยหากมีข้อมูล overflow จะทำการซ่อนข้อมูสบนั้น และมีพื้นหลังเป็นสีใส */
 .topnav{
     display: flex;
     overflow: hidden;
     background-color: transparent;
 }
 
+/* กำหนดให้ tag a ที่อยุ่ภายใต้ element ที่มี class เป็น topnav มีการแสดงผลแบบ block มีสีเทาอ่อน จัดกึ่งกลาง โดยมีระยะขอบภายในด้านบน-ล่างและด้านซ้าย-ขวาเป็น 14px และ 16px ตามลำดับ เป็นตัวพิมพ์ใหญ่ทั้งหมด ขนาด 18px แบบหนา และมีระยะห่างระหว่างตัวอักษร 1px */
 .topnav a{
-    float: left;
     display: block;
     color: lightgray;
     text-align: center;
@@ -36,59 +39,73 @@ header > h1{
     letter-spacing: 1px;
 }
 
+/* กำหนดให้เมื่อมีเม้าส์อยู่บน tag a ที่อยู่ภายใต้ element ที่มี class เป็น topnav หรือ tag a ที่มี class เป็น active ที่อยู่ภายใต้ element ที่มี class เป็น topnav ให้มีสีดำและมีเส้นขอบด้านล่างขนาด 2px สีดำแบบเส้นตรง */
 .topnav a:hover, .topnav a.active{
     color: black;
     border-bottom: 2px solid black;
 }
 
+/* ให้ซ่อนการแสดงผลของ element ที่มี class เป็น icon ที่อยู่ภายใต้ element ที่มี class เป็น topnav */
 .topnav .icon{
     display: none;
 }
 
+/* กำหนดให้ footer มีระยะขอบภายในด้านซ้ายและด้านขวาเท่ากับ 3 em แสดงผลแบบ flex มีความสูงต่ำสุด 40px พื้นหลังเป็นสีเทาอ่อน และจัดกึ่งกลาง items */
 footer{
-    padding-left: 3em;
-    padding-right: 3em;
+    padding: 0 3em;
     display: flex;
     min-height: 40px;
-    /* justify-content: center; */
     background-color: lightgrey;
     align-items: center;
 }
 
+/* กำหนดให้ p child สุดท้ายของ footer จัดชิดขวา */
 footer>p:last-child{
     margin-left: auto;
 }
 
+/* Breakpoint สำหรับหน้าจอที่มีขนาดตั้งแต่ 768px ลงมา */
 @media only screen and (max-width: 768px){
+    /* กำหนดให้ header มีระยะขอบภายนอกด้านซ้ายและขวาเท่ากับ 2em */
     header{
-        margin-left: 2em;
-        margin-right: 2em;
+        margin: 0 2em;
     }
 
+    /* กำหนดให้ footer มีระยะขอบด้านบนเท่ากับ 3em มีการแสดงผลแบบ flex ในลักษณะจากบนลงล่าง */
     footer{
         margin-top: 3em;
         flex-direction: column;
     }
 
+    /* จัดกึ่งกลางข้อความของ p ที่เป็น child ของ footer */
     footer > p{
         text-align: center;
     }
 
+    /* กำหนดให้ p ที่เป็น child ตัวสุดท้ายของ footer ให้มีขอบภายนอกด้านซ้ายเป็น 0 */
     footer > p:last-child{
         margin-left: 0;
     }
 }
 
+/* Breakpoint สำหรับหน้าจอที่มีขนาดตั้งแต่ 735px ลงมา */
 @media only screen and (max-width: 735px){
+    /* กำหนดให้ไม่แสดงผล h1 ที่อยู่ภายใต้ header */
     header h1{
         display: none;
     }
+
+    /* กำหนดให้ header มีระยะขอบภายนอกด้านล่างเท่ากับ 1.5em */
     header{
         margin-bottom: 1.5em;
     }
+
+    /* กำหนดให้ไม่แสดงผล tag a ที่อยู่ภายใต้ element ที่มี class เป็น topnav ที่ไม่ใช่ตัวแรก */
     .topnav a:not(:first-child){
         display: none;
     }
+
+    /* กำหนดให้ tag a ที่มี class เป็น icon ที่อยุ่ภายใต้ element ที่มี class เป็น topnav ไปอยู่ในตำแหน่งมุมบนขวามือ */
     .topnav a.icon {
         float: right;
         display: block;
@@ -96,16 +113,22 @@ footer>p:last-child{
         right: 1.67em;
         top: 0.34em;
     }
+
+    /* กำหนดให้ element ที่มี class เป็น topnav และ responsive จัดวางตำแหน่งแบบเรียงกันไป และแสดงผลแบบ block */
     .topnav.responsive {
         position: relative; 
         width: 100%; 
         display: block;
     }
+
+    /* กำหนดให้ element ที่มี class เป็น icon ที่อยู่ภายใต้ element ที่มี class เป็น topnav และ responsive อยู่ในตำแหน่งมุมบนขวามือสุด (ของ parent element) */
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
+    /* กำหนดให้ tag a ที่อยู่ภายใต้ element ที่มี class เป็น topnav และ responsive แสดงผลแบบ block และมีข้อความชิดซ้าย */
     .topnav.responsive a {
         float: none;
         display: block;
