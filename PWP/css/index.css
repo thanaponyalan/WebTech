@@ -1,3 +1,4 @@
+/* กำหนดให้ tag main มีระยะขอบทุกด้านเท่ากับ 3em โดยมีการแสดงผลเป็น grid ที่มีช่องว่างระหว่าง grid เท่ากับ 3em โดยแสดงผล about ไว้บน js (grid-area)  */
 main{
     margin: 3em;
     display: grid;
@@ -7,19 +8,23 @@ main{
         "js";
 }
 
+/* กำหนด grid area ให้กับ element ที่มี id เป็น about */
 #about{
     grid-area: about;
 }
 
+/* กำหนด grid area ให้กับ element ที่มี id เป็น js */
 #js{
     grid-area: js;
 }
 
+/* กำหนดให้ tag section มีการแสดงผลในรูปแบบ grid โดยมี 3 rows 2 columns */
 section{
     display: grid;
     grid-template: 1fr 6fr 5fr/3fr 4fr;
 }
 
+/* กำหนดให้ tag p และ tag a ที่อยู่ภายใต้ section มีขนาดตัวอักษรเท่ากับ 20px มีสีเทา และมีขอบภายในด้านซ้ายและด้านขวากว้างเท่ากับ 20px */
 section p, section a{
     font-size: 20px;
     color: grey;
@@ -27,6 +32,7 @@ section p, section a{
     padding-left: 20px;
 }
 
+/* กำหนดให้ element ที่มี class เป็น sectionHeader มีตัวอักษรสีดำ ขนาด 24px แบบหนา และมีขอบภายนอกทุกด้านเป็น 0 */
 .sectionHeader{
     color: black;
     font-size: 24px;
@@ -34,6 +40,7 @@ section p, section a{
     margin: 0;
 }
 
+/* กำหนดให้ element ที่มี class เป็น sectionFooter มีตัวอักษรสีฟ้า ขนาด 18px ในรูปแบบตัวพิมพ์ใหญ่ */
 .sectionFooter{
     color: #00bbff;
     font-size: 18px;
@@ -41,10 +48,12 @@ section p, section a{
     text-transform: uppercase;
 }
 
+/* กำหนดให้เมื่อมีการชี้เม้าส์บน element ที่มี class เป็น sectionFooter ให้มีการขีดเส้นใต้ */
 .sectionFooter:hover{
     text-decoration: underline;
 }
 
+/* กำหนดให้ image มีการ span row 3 row มีความกว้าง 100% round and shadow */
 img{
     grid-row: span 3/auto;
     width: 100%;
@@ -52,23 +61,28 @@ img{
     box-shadow: 16px 8px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Breakpoint สำหรับหน้าจอที่มีขนาด 768px ลงมา */
 @media only screen and (max-width: 768px){
+    /* กำหนดให้ขอบภายนอกของ tag main มีค่าเท่ากับ 0 */
     main{
         margin: 0;
     }
 
+    /* กำหนดให้ tag section มีการแสดงผลเป็น grid ในลักษณะ 3 rows โดย row กลางใหญ่ที่สุด และจัดกึ่งกลางตัวอักษรต่าง ๆ */
     section{
         grid-template: none;
         grid-template-rows: 1fr 3fr 1fr;
         text-align: center;
     }
 
+    /* กำหนดให้ image มีขนาดความกว้าง 80% อยู่ตรงกลางของหน้าจอ */
     img{
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
+    /* กำหนดให้มีระยะของด้านล่างภายนอกของ image ที่อยู่ภายใต้ element ที่มี id เป็น js */
     #js img{
         margin-bottom: 1em;
     }
