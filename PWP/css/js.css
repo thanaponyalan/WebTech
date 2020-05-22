@@ -1,0 +1,106 @@
+main{
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.wrapper{
+  background: white;
+  color:lightgrey;
+  height:100%;
+  text-align:center;
+  font-size:18px;
+  width:100%;
+}
+
+#buttons{
+  display: grid;
+  grid-template: repeat(5,1fr)/repeat(6,1fr);
+  grid-gap: 1em;
+}
+
+#buttons.avoid-clicks{
+  pointer-events: none;
+}
+
+canvas{
+  color:darkgrey;
+  border: darkgrey dashed 2px;
+  padding:15px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+   margin:5px 0;
+   color: black;
+}
+
+
+#alphabets {
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+#mylives{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+button{
+  background:lightgrey;
+  color:white;
+  border: solid 1px white;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+}
+button:hover,button.active{
+  background:black;
+  border: solid 1px darkgrey;
+  color:white;
+}
+button.letter{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+}
+@media (max-width: 768px){
+  main{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+@media (max-width: 735px) {
+  #buttons {
+    grid-template: repeat(7,1fr)/repeat(4,1fr);
+  }
+}
+
+@media (max-width: 375px) {
+  #buttons {
+    grid-template: repeat(9,1fr)/repeat(3,1fr);
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website Project : Thanapon Yalan</title>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/myStyle.css">
+        <link rel="stylesheet" href="./css/js.css">
+    </head>
+    <body>
+        <header>
+            <h1>Just a Personal Website</h1>
+            <div class="topnav" id="myTopnav">
+                <a href="/">Home</a>
+                <a href="/js.html" class="active">JavaScript</a>
+                <a href="/cv.html">Curriculum Vitae</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <h1>Hangman</h1>
+                <h2>JavaScript Hangman Game</h2>
+                <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+            </div>
+            <div class="wrapper">
+                <div id="buttons">
+                    
+                </div>
+                <p id="categoryName"></p>
+                <div id="hold"></div>
+                <p id="mylives"></p>
+                <p id="clue">Clue -</p>
+                <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+                <div class="container">
+                    <button id="hint">Hint</button>
+                    <button id="reset">Play again</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Thanapon Yalan</p>
+            <p>Original From <a href="https://codepen.io/cathydutton/pen/ldazc">JavaScript Hangman Game</a></p>
+        </footer>
+        <script src="./js/myScript.js"></script>
+        <script src="./js/myHangman.js"></script>
+        <!-- <script src="./js/hangman.js"></script> -->
+    </body>
+
+</html>
