@@ -3,8 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 0 2em;
 }
 
 /* กำหนดให้ h1 และ h2 ภายใต้ element ที่มี id เป็น first และ h3 ทั้งหมดให้แสดงผลตัวอักษรในรูปแบบตัวพิมพ์ใหญ่ */
@@ -74,8 +73,7 @@ meter::-webkit-meter-optimum-value {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 /* กำหนดให้ element ที่มี id เป็น myHobbies มีการแสดงผลเป็น grid ที่มี 4 columns เท่า ๆ กัน และมีระยะห่างระหว่างช่อง 1em */
