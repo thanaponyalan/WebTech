@@ -1,6 +1,5 @@
+/* กำหนดให้การแสดงผลของ element ที่มี id เป็น first เป็นแบบ flexbox โดยมีทิศทางจากบนลงล่าง */
 #first{
-    /* display: grid;
-    grid-template: 2fr 3fr 2fr/2fr 2fr; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,56 +7,69 @@
     margin-right: 2em;
 }
 
+/* กำหนดให้ h1 และ h2 ภายใต้ element ที่มี id เป็น first และ h3 ทั้งหมดให้แสดงผลตัวอักษรในรูปแบบตัวพิมพ์ใหญ่ */
 #first h1, #first h2, h3{
     text-transform: uppercase;
 }
 
+/* round, resize and shadow images */
 img{
     border-radius: 50%;
     width: 25%;
     box-shadow: 16px 8px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* กำหนดให้ element ที่มี id เป็น second แสดงผลแบบ grid โดยมีการแสดงผลเป็น 2 rows และ 2 columns ช่องละเท่า ๆ กัน */
 #second{
     display: grid;
     grid-template: 1fr 1fr/1fr 1fr;
 }
 
+/* กำหนดให้มีการแสดงผลเส้นขอบด้านใต้ของ tag h3 เป็นเส้นตรงขนาด 3px มีสีดำโดยมี opacity(ความเข้ม) 0.08 */
 h3{
     border-bottom: 3px solid rgba(0,0,0,0.08);
 }
 
+/* กำหนดให้การแสดงผลของ element ที่มี class เป็น left มีตัวอักษรชิดขวา มีขอบภายในทางด้านขวาขนาด 2em และมีเส้นขอบด้านขวาขนาด 2px เส้นตรงเป็นสีดำที่มีความเข้ม 0.1  */
 .left{
     text-align: right;
     padding-right: 2em;
     border-right: 2px solid rgba(0,0,0,0.1);
 }
 
+/* กำหนดให้ ul ที่อยู่ภายใต้ element ที่มี class เป็น left มีการแสดงผล element ต่าง ๆ จากด้านขวาไปสู่ด้านซ้าย right to left */
 .left ul{
     direction: rtl;
 }
 
+/* กำหนดให้ tag p ที่อยู่ภายใต้ tag li ที่อยู่ภายใต้ tag ul และอยู่ภายใต้ element ที่มี class เป็น left มีการแสดงผล element ต่าง ๆ ภายในจากด้านซ้ายไปสู่ด้านขวา left to right */
 .left ul li p{
     direction: ltr;
 }
 
+/* กำหนดให้ element ที่มี class เป็น right มีขอบภายในด้านซ้ายขนาด 2em และมีเส้นขอบด้านซ้ายขนาด 2px มีลักษณะเป็นเส้นตรงและมีสีดำที่มีควมเข้มเท่ากับ 0.1 */
 .right{
     padding-left: 2em;
     border-left: 2px solid rgba(0,0,0,0.1);
 }
 
+/* กำหนดให้ tag p ที่อยู่ภายใต้ tag li ที่อยู่ภายใต้ element ที่มี id เป็น skills มีการแสดงผลเป็น grid ในลักษณะ 2 column โดยด้านซ้ายเล็กกว่าด้านขวา */
 #skills li p{
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
+/* กำหนดให้ tag meter มีขนาดความกว้าวเท่ากับ 80% */
 meter{
     width: 80%;
 }
+
+/* กำหนดให้สีของ meter เป็นการไล่เฉดสีจากซ้ายไปขวาจากสี #707070 ไปยังสี #505050 */
 meter::-webkit-meter-optimum-value {
     background: linear-gradient(to right, #707070, #505050);
 }
 
+/* กำหนดให้ element ที่มี id เป็น third มีการแสดงผลเป็น flexbox ในลักษณะบนลงล่าง โดยให้ items ต่าง ๆ อยู่กึ่งกลาง โดยมีระยะขอบภายนอกด้านบนและด้านล่าง 1em */
 #third{
     display: flex;
     flex-direction: column;
@@ -66,48 +78,60 @@ meter::-webkit-meter-optimum-value {
     margin-bottom: 1em;
 }
 
+/* กำหนดให้ element ที่มี id เป็น myHobbies มีการแสดงผลเป็น grid ที่มี 4 columns เท่า ๆ กัน และมีระยะห่างระหว่างช่อง 1em */
 #myHobbies{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
 }
 
+/* กำหนดให้ img ที่อยู่ภายใต้ element ที่มี id เป็น myHobbies ไม่มีขอบของรูปภาพและขนาดความกว้างเท่ากับ 36px */
 #myHobbies img{
     border-radius: 0%;
     width: 36px;
 }
 
+/* Breakpoint ของหน้าจอที่มีขนาด 1024px ลงมา */
 @media only screen and (max-width: 1024px){
+    /* กำหนดให้ tag p ที่อยู่ภายใต้ tag li ที่อยู่ภายใต้ element ที่มี id เป็น skills มีการแสดงผลเป็น grid โดยมีลักษณะเป็น 2 columns ที่ column ด้านซ้ายเล็กกว่าด้านขวา */
     #skills li p{
         display: grid;
         grid-template-columns: 1fr 3fr;
     }
 }
 
+/* Breakpoint ของหน้าจอที่มีขนาด 864px ลงมา */
 @media only screen and (max-width: 864px){
+    /* กำหนดให้ tag p ที่อยู่ภายใต้ tag li ที่อยู่ภายใต้ element ที่มี id เป็น skills มีการแสดงผลเป็น grid โดยมีลักษณะเป็น 2 columns ที่ column ด้านซ้ายเล็กกว่าด้านขวา */
     #skills li p{
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
 }
 
+/* Breakpoint ของหน้าจอที่มีขนาด 768px ลงมา */
 @media only screen and (max-width: 768px){
+    /* กำหนดให้ element ที่มี id เป็น second มีการแสดงผลเป็น grid ในรูปแบบที่มีเพียง 1 column */
     #second{
         grid-template: none;
         grid-column: 1fr;
     }
+    /* กำหนดให้ element ที่มี class เป็น left มีการแสดงผลข้อความชิดซ้าย มีขอบภายในด้านซ้ายขนาดเท่ากับ 2em และไม่มีเส้นขอบด้านขวา */
     .left{
         text-align: left;
         border-right: none;
         padding-left: 2em;
     }
+    /* กำหนดให้ tag ul ที่อยู่ภายใต้ element ที่มี class เป็น left มีการแสดงผล elements ต่าง ๆ จากซ้ายไปขวา left to right */
     .left ul{
         direction: ltr;
     }
+    /* กำหนดให้ element ที่มี class เป็น right มีขอบภายในด้านขวากว้างเท่ากับ 2em และไม่มีเส้นขอบด้านซ้าย */
     .right{
         border-left: none;
         padding-right: 2em;
     }
+    /* กำหนดให้ image มีขนาดเท่ากับ 50% */
     img{
         width: 50%;
     }
