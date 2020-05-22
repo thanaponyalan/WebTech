@@ -20,6 +20,7 @@ var reset=document.querySelector(`#reset`),
 function createButton(){ //Add 26 btns for 26 English alphabet, assign eventListener to each btn.
     var alphabets=[`a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`,`i`,`j`,`k`,`l`,`m`,`n`,`o`,`p`,`q`,`r`,`s`,`t`,`u`,`v`,`w`,`x`,`y`,`z`];
     buttonArea=document.querySelector(`#buttons`);
+    buttonArea.removeAttribute(`class`);
     var btn;
 
     for(var i=0;i<alphabets.length;i++){
@@ -192,6 +193,7 @@ function canvas(){ //start canvas draw with color: #000 and width: 2
         holdArea.parentNode.removeChild(holdArea); //remove all guessed alphabets
         buttonArea.innerHTML=``; //clear all button
         showClue.innerHTML=``; //clear clue
+        context.clearRect(0, 0, 400, 400);
         startGame(); //start new game
     });
 })();
