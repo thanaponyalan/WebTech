@@ -83,10 +83,11 @@ meter::-webkit-meter-optimum-value {
     grid-gap: 1em;
 }
 
-/* กำหนดให้ img ที่อยู่ภายใต้ element ที่มี id เป็น myHobbies ไม่มีขอบของรูปภาพและขนาดความกว้างเท่ากับ 36px */
+/* กำหนดให้ img ที่อยู่ภายใต้ element ที่มี id เป็น myHobbies ไม่มีขอบของรูปภาพและขนาดความกว้างเท่ากับ 36px และะไม่มีเงา */
 #myHobbies img{
     border-radius: 0%;
     width: 36px;
+    box-shadow: none;
 }
 
 /* Breakpoint ของหน้าจอที่มีขนาด 1024px ลงมา */
@@ -132,5 +133,12 @@ meter::-webkit-meter-optimum-value {
     /* กำหนดให้ image มีขนาดเท่ากับ 50% */
     img{
         width: 50%;
+    }
+}
+@media only screen and (max-width: 320px){
+    /* กำหนดให้ tag p ที่อยู่ภายใต้ tag li ที่อยู่ภายใต้ element ที่มี id เป็น skills มีการแสดงผลเป็น grid โดยมีลักษณะเป็น 2 columns ที่ column ด้านซ้ายเล็กกว่าด้านขวา */
+    #skills li p{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
     }
 }
