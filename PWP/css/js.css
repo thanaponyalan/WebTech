@@ -1,26 +1,30 @@
+/* กำหนดให้ tag main มีระยะขอบภายนอกด้านซ้ายและขวามีขนาดเท่ากับ 3em */
 main{
-  margin-left: 3em;
-  margin-right: 3em;
+  margin: 0 3em;
 }
+
+/* กำหนดให้ element ที่มี class เป็น wrapper มีสีพื้นหลังสีขาว มีตัวอักษรสีเทาอ่อน อยู่กึ่งกลาง มีขนาดเท่ากับ 18px และกว้าง 100% */
 .wrapper{
   background: white;
   color:lightgrey;
-  height:100%;
   text-align:center;
   font-size:18px;
   width:100%;
 }
 
+/* กำหนดให้ element ที่มี id เป็น buttons มีการแสดงผลแบบ grid ในลักษณะ 5 rows 6 columns และให้มีระยะห่างระหว่าง grid เท่ากับ 1em */
 #buttons{
   display: grid;
   grid-template: repeat(5,1fr)/repeat(6,1fr);
   grid-gap: 1em;
 }
 
+/* กำหนดให้ element ที่มี id เป็น buttons และมี class เป็น avoid-clicks ไม่สามารถคลิ๊ก element ต่าง ๆ ภายในได้ */
 #buttons.avoid-clicks{
   pointer-events: none;
 }
 
+/* กำหนดให้ canvas มีสีและสีเส้นขอบเป็น darkgrey โดยเส้นขอบมีลักษณะเป็นเส้นประ มีความกว้างขนาด 2px มีระยะขอบภายในเท่ากับ 15px โดยรวมอยู่ภายในขนาด element และให้มีความกว้างได้สูงสุด 480px  */
 canvas{
   color:darkgrey;
   border: darkgrey dashed 2px;
@@ -30,25 +34,20 @@ canvas{
   box-sizing: border-box;
 }
 
+/* กำหนดให้ tag h1 h2 และ h3 มีสีตัวอักษรเป็นสีดำโดยมีระยะขอบภายนอกด้านบนและล่างเท่ากับ 5px */
 h1, h2, h3 {
    margin:5px 0;
    color: black;
 }
 
-
-#alphabets {
-  margin:15px auto;
-  padding:0;
-  max-width:900px;
-}
-
+/* กำหนดให้ element ที่มี id เป็น my-word ให้มีระยะขอบทัังภายนอกและภายในเท่ากับ 0 และแสดงผลเป็น block */
 #my-word {
   margin: 0;
   display: block;
   padding: 0;
-  display:block;
 }
 
+/* กำหนดให้ li ที่อยู่ภายใต้ element ที่มี id เป็น my-word มีการแสดงผลแบบต่อเนื่องกันไป ไม่ใช้ list-style แบบตั้งต้น มีระยะขอบภายนอกเท่ากับ 0 ขอบภายในด้านซ้ายและขวาเท่ากับ 10px ขนาดตัวอักษร 1.6em อยู่ในบรรทัดเดียวกัน */
 #my-word li {
   position: relative;
   list-style: none;
@@ -58,12 +57,14 @@ h1, h2, h3 {
   font-size:1.6em;
 }
 
+/* กำหนดให้ element ที่มี id เป็น mylives มีขนาดตัวอักษรเท่ากับ 1.6em จัดกึ่งกลาง และแสดงผลเป็น block */
 #mylives{
   font-size:1.6em;
   text-align:center;
   display:block;
 }
 
+/* กำหนดให้ tag button มีสีพื้นหลังเป็นสีเทาอ่อน ตัวอักษรสีขาว เส้นขอบแบบเส้นตรงสีขาวขนาด 1px ไม่มีการตกแต่งข้อความแบบอื่น ๆ มีขนาดตัวอักษะเท่ากับ 1.2em มีระยะขอบภายในด้านบน-ล่าง และด้านซ้าย-ขวา เป็น 18px และ 10px ตามลำดับ และมีระยะขอบภายนอกเท่ากับ 10px */
 button{
   background:lightgrey;
   color:white;
@@ -76,30 +77,40 @@ button{
   margin: 10px;
   outline: none;
 }
+
+/* กำหนดให้เมื่อมีเม้าส์อยู่บน tag button หรือ tag button มี class เป็น active ให้มีพื้นหลังสีดำ เส้นขอบเป็นเส้นตรงสีเทาขนาด 1px และให้มีตัวอักษรสีขาว */
 button:hover,button.active{
   background:black;
   border: solid 1px darkgrey;
   color:white;
 }
+
+/* กำหนดให้ tag button ที่มี class เป็น letter มีความกว้าง 100% และมีระยะขอบภายในเท่ากับ 20px */
 button.letter{
   width: 100%;
-  height: 100%;
   padding: 20px;
   margin: 0;
 }
-@media (max-width: 768px){
+
+/* Breakpoint สำหรับหน้าจอที่มีขนาด 768px ลงมา */
+@media only screen and (max-width: 768px){
+  /* กำหนดให้ระยะขอบภายนอกด้านซ้ายและด้านขวามีขนาดเท่ากับ 2em */
   main{
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 0 2em;
   }
 }
+
+/* Breakpoint สำหรับหน้าจอที่มีขนาด 735px ลงมา */
 @media (max-width: 735px) {
+  /* กำหนดให้ element ที่มี id เป็น buttons ให้มีการแสดงผลเป็น grid ที่มีขนาด 7 rows 4 columns */
   #buttons {
     grid-template: repeat(7,1fr)/repeat(4,1fr);
   }
 }
 
+/* Breakpoint สำหรับหน้าจอที่มีขนาด 375px ลงมา */
 @media (max-width: 375px) {
+  /* กำหนดให้ element ที่มี id เป็น buttons ให้มีการแสดงผลเป็น grid ที่มีขนาด 9 rows 3 columns */
   #buttons {
     grid-template: repeat(9,1fr)/repeat(3,1fr);
   }
